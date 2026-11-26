@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="bg-linear-to-r from-[#19042d] to-[#4a0c49] ">
+    <header class="bg-linear-to-r from-[#19042d] to-[#4a0c49] overflow-x-hidden">
         <nav class="flex  md:justify-between items-center px-5 ">
             <div class="flex items-center">
                 <img class="w-[100px] h-[100px]" src="./public/images/Logo.webp" alt="">
@@ -35,6 +35,24 @@
                         <path d="M18 6l-12 12" />
                         <path d="M6 6l12 12" />
                     </svg></span></button>
+            <div class="navbar shadow-sm lg:hidden bg-transparent pl-50 pb-30">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                            <svg aria-label="Menu" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </div>
+                        <ul tabindex="-1"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./public/pages/Issues.html">The Issues</a></li>
+                            <li><a href="./public/pages/Solutions.html">The Solutions</a></li>
+                        </ul>
+                    </div>
+                </div>
         </nav>
 
     </header>
@@ -120,7 +138,8 @@
             <div class="flex justify-center items-center flex-col ">
                 <h2 class="text-white pt-10 lg:text-6xl text-3xl">End Impunity</h2>
                 <h2 class="text-orange-600 pt-5 lg:text-8xl text-4xl ">Creat Lasting Change.</h2>
-                <p class="text-white py-10 lg:text-3xl text-2xl text-center">Together, for a safer, fairer and more equal world.</p>
+                <p class="text-white py-10 lg:text-3xl text-2xl text-center pb-15">Together, for a safer, fairer and
+                    more equal world.</p>
                 <button class="text-white flex items-center text-3xl border rounded-3xl px-10 py-5 ">Explore the Campain
                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -133,7 +152,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

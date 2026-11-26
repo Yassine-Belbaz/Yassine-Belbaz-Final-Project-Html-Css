@@ -1,0 +1,82 @@
+.last-part-of-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-color: #fae2dd;
+}
+.left-side {
+    background-image: linear-gradient(to right, #18023f, purple );
+    background-color:#18023f;
+    width: fit-content;
+    padding: 4rem 2rem 2rem 2rem ;
+    border-radius: 20px;
+}
+.left-side :nth-child(1) {
+  color: orange;
+  font-size: 60px;
+  width: 100%;
+  line-height: 50px;
+  padding-bottom: 2rem;
+}
+.left-side hr {
+    border: solid rgb(202, 151, 204) 2px;
+}
+.left-side :nth-child(3),:nth-child(6) {
+  padding-top: 2rem;
+  color: rgb(240, 202, 132);
+  font-size: 60px;
+  width: 100%;
+  line-height: 50px;
+  padding-bottom: 1rem;
+}
+.left-side p {
+    text-align: start;
+    color: rgb(228, 168, 255);
+    font-size: x-large;
+    width: 70%;
+    padding-bottom: 1rem;
+}
+.right-side {
+  color: #18023f;
+}
+.right-side h2 {
+  font-size: 50px;
+  font-weight: bold;
+}
+.right-side p {
+  display: flex;
+  align-items: center;
+  font-size: larger;
+  padding: 1rem 0;
+}
+.right-side span {
+  padding-right: 1rem;
+}
+.right-side svg {
+  background-color: orange;
+  border-radius: 50%;
+  padding: 5px;
+}
+.padd-left {
+  padding-left: 5rem;
+}
+.spin-icon:hover {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 465px) {
+    .last-part-of-main {
+        flex-direction: column;
+    }
+    .right-side h2 {
+        text-align: center;
+    }
+}

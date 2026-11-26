@@ -11,7 +11,6 @@
     --color-orange-300: oklch(83.7% 0.128 66.29);
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-orange-600: oklch(64.6% 0.222 41.116);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-purple-950: oklch(29.1% 0.149 302.717);
     --color-black: #000;
     --color-white: #fff;
@@ -694,59 +693,6 @@
     }
   }
   @layer daisyui.l1.l2.l3 {
-    .list {
-      display: flex;
-      flex-direction: column;
-      font-size: 0.875rem;
-    }
-    .list .list-row {
-      --list-grid-cols: minmax(0, auto) 1fr;
-      position: relative;
-      display: grid;
-      grid-auto-flow: column;
-      gap: calc(0.25rem * 4);
-      border-radius: var(--radius-box);
-      padding: calc(0.25rem * 4);
-      word-break: break-word;
-      grid-template-columns: var(--list-grid-cols);
-    }
-    :is(.list > :not(:last-child).list-row, .list > :not(:last-child)  .list-row):after {
-      content: "";
-      border-bottom: var(--border) solid;
-      inset-inline: var(--radius-box);
-      position: absolute;
-      bottom: 0px;
-      border-color: var(--color-base-content);
-      @supports (color: color-mix(in lab, red, red)) {
-        border-color: color-mix(in oklab, var(--color-base-content) 5%, transparent);
-      }
-    }
-  }
-  @layer daisyui.l1.l2 {
-    .list .list-row:has( > .list-col-grow:nth-child(1)) {
-      --list-grid-cols: 1fr;
-    }
-    .list .list-row:has( > .list-col-grow:nth-child(2)) {
-      --list-grid-cols: minmax(0, auto) 1fr;
-    }
-    .list .list-row:has( > .list-col-grow:nth-child(3)) {
-      --list-grid-cols: minmax(0, auto) minmax(0, auto) 1fr;
-    }
-    .list .list-row:has( > .list-col-grow:nth-child(4)) {
-      --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) 1fr;
-    }
-    .list .list-row:has( > .list-col-grow:nth-child(5)) {
-      --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto) 1fr;
-    }
-    .list .list-row:has( > .list-col-grow:nth-child(6)) {
-      --list-grid-cols: minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, auto)
-          minmax(0, auto) 1fr;
-    }
-    .list .list-row  > * {
-      grid-row-start: 1;
-    }
-  }
-  @layer daisyui.l1.l2.l3 {
     .toast {
       position: fixed;
       inset-inline-start: auto;
@@ -1327,6 +1273,15 @@
   .fixed {
     position: fixed;
   }
+  .sticky {
+    position: sticky;
+  }
+  .top-\[5\%\] {
+    top: 5%;
+  }
+  .top-\[10\%\] {
+    top: 10%;
+  }
   .left-\[65\%\] {
     left: 65%;
   }
@@ -1522,6 +1477,9 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-25 {
+    height: calc(var(--spacing) * 25);
+  }
   .h-\[40vh\] {
     height: 40vh;
   }
@@ -1537,11 +1495,17 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
+  .w-25 {
+    width: calc(var(--spacing) * 25);
+  }
   .w-52 {
     width: calc(var(--spacing) * 52);
   }
   .w-\[40\%\] {
     width: 40%;
+  }
+  .w-\[50\%\] {
+    width: 50%;
   }
   .w-\[70\%\] {
     width: 70%;
@@ -1554,6 +1518,12 @@
   }
   .w-\[100px\] {
     width: 100px;
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .w-full {
+    width: 100%;
   }
   .flex-shrink {
     flex-shrink: 1;
@@ -1639,17 +1609,20 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .flex-wrap {
     flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
   }
-  .justify-between {
-    justify-content: space-between;
-  }
   .justify-center {
     justify-content: center;
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-18 {
     gap: calc(var(--spacing) * 18);
@@ -1759,6 +1732,9 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   @layer daisyui.l1.l2.l3 {
     .menu-title {
       padding-inline: calc(0.25rem * 3);
@@ -1790,6 +1766,9 @@
   .px-20 {
     padding-inline: calc(var(--spacing) * 20);
   }
+  .py-0 {
+    padding-block: 0px;
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -1811,8 +1790,14 @@
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
   .pt-30 {
     padding-top: calc(var(--spacing) * 30);
+  }
+  .pr-5 {
+    padding-right: calc(var(--spacing) * 5);
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
@@ -1832,32 +1817,29 @@
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
   }
+  .pl-3 {
+    padding-left: calc(var(--spacing) * 3);
+  }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
+  .pl-9 {
+    padding-left: calc(var(--spacing) * 9);
   }
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
   }
+  .pl-12 {
+    padding-left: calc(var(--spacing) * 12);
+  }
   .pl-15 {
     padding-left: calc(var(--spacing) * 15);
   }
-  .pl-20 {
-    padding-left: calc(var(--spacing) * 20);
-  }
-  .pl-30 {
-    padding-left: calc(var(--spacing) * 30);
-  }
-  .pl-40 {
-    padding-left: calc(var(--spacing) * 40);
-  }
   .pl-50 {
     padding-left: calc(var(--spacing) * 50);
-  }
-  .pl-70 {
-    padding-left: calc(var(--spacing) * 70);
-  }
-  .pl-90 {
-    padding-left: calc(var(--spacing) * 90);
   }
   .pl-100 {
     padding-left: calc(var(--spacing) * 100);
@@ -1958,12 +1940,23 @@
       color: var(--color-black);
     }
   }
+  @media (width >= 40rem) {
+    .sm\:w-full {
+      width: 100%;
+    }
+  }
   @media (width >= 48rem) {
     .md\:justify-between {
       justify-content: space-between;
     }
   }
   @media (width >= 64rem) {
+    .lg\:sticky {
+      position: sticky;
+    }
+    .lg\:left-\[90\%\] {
+      left: 90%;
+    }
     .lg\:block {
       display: block;
     }
@@ -1976,6 +1969,9 @@
     .lg\:w-\[30\%\] {
       width: 30%;
     }
+    .lg\:flex-col {
+      flex-direction: column;
+    }
     .lg\:flex-row {
       flex-direction: row;
     }
@@ -1987,6 +1983,12 @@
     }
     .lg\:pb-10 {
       padding-bottom: calc(var(--spacing) * 10);
+    }
+    .lg\:pl-2 {
+      padding-left: calc(var(--spacing) * 2);
+    }
+    .lg\:pl-5 {
+      padding-left: calc(var(--spacing) * 5);
     }
     .lg\:text-3xl {
       font-size: var(--text-3xl);

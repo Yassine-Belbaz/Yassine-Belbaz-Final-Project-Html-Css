@@ -4,6 +4,7 @@
   align-items: center;
   gap: 5rem;
   background-color: #fae2dd;
+  padding-bottom: 5rem;
 }
 .left-side {
     background-image: linear-gradient(to right, #18023f, purple );

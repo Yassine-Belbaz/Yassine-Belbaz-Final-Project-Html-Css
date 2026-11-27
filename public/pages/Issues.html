@@ -27,7 +27,7 @@
                 <a href="./Solutions.html" class="rounded-2xl px-2 py-2 hover:bg-white hover:text-black">Solutions</a>
             </div>
             <button
-                class="flex hidden lg:block lg:flex lg:items-center items-center bg-orange-600 py-3 px-5 rounded-2xl text-white transition animate-bounce ">Quick
+                class="hidden lg:flex lg:items-center items-center bg-orange-600 py-3 px-5 rounded-2xl text-white transition animate-bounce ">Quick
                 Exit<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-x">
@@ -35,13 +35,33 @@
                         <path d="M18 6l-12 12" />
                         <path d="M6 6l12 12" />
                     </svg></span></button>
+            <div class="navbar shadow-sm lg:hidden bg-transparent overflow-x-hidden pl-40 pb-30 pt-20">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                            <svg aria-label="Menu" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </div>
+                        <ul tabindex="-1"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="../pages/Issues.html">The Issues</a></li>
+                            <li><a href="../pages/Solutions.html">The Solutions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </nav>
 
     </header>
     <main>
         <div class="bg-[url('../images/girl-crying.webp')] bg-cover bg-center  min-h-screen pb-15">
             <button
-                class="flex hidde fixed left-[65%] lg:hidden items-center bg-orange-600 py-3 px-5 rounded-2xl text-white transition animate-bounce ">Quick
+                class="flex hidde fixed left-[65%] top-[5%] lg:hidden items-center bg-orange-600 py-3 px-5 rounded-2xl text-white transition animate-bounce ">Quick
                 Exit<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="icon icon-tabler icons-tabler-outline icon-tabler-x">
@@ -175,7 +195,6 @@
                             </svg></span></button>
                 </div>
             </div>
-
         </div>
     </footer>
 
